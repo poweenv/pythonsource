@@ -67,3 +67,72 @@ print(r"\n\t \\ 그대로 출력")
 
 print("글자가 '강조' 되는 효과") # 문자 표현시 "", '' 허용
 print('글자가 "강조" 되는 효과') # 문자 표현시 "", '' 허용
+
+# 문자열 - "",'', """한글""",'''한글'''
+
+str1= "Life is too short, You need Python"
+str2= 'Life is too short, You need Python'
+str3= '''Life is too short, You need Python'''
+str3= """Life is too short, You need Python"""
+
+num1 = num2 =10
+print(num1,num2)
+
+num1, num2 = 10,15
+print(num1,num2)
+
+# 한글+ 10=? X
+
+# 타입변환 숫자=> 문자열 : str()
+#print(num1 + str(num2))
+
+a, b =7233,5.123456
+print("a + b = %d" % (a+b))
+print("a - b = %d" % (a-b))
+print("a * b = %d" % (a*b))
+print("a / b = %f" % (a/b))   #스크립트와 같은 개념
+print("a // b = %f" % (a//b)) #자바와 같은 개념(몫)
+print("a % b = " ,(a%b))
+print("a ** b = ", (a**b))
+
+# type() : 변수 타입 확인
+# str() : 문자열 변환, int() : 숫자 변환, float() : 실수, bool() : boolean 변환
+print(str(3.5))
+print(str(3.5),type(str(3.5)))
+print(int(True),type(int(True)))
+print(int(False),type(int(False)))
+print(bool(0.1), type(bool(0.1)))
+print(float("98.99"), type(float("98.99")))
+# print(int("98.99"), type(int("98.99"))) ValueError: invalid literal for int() with base 10: '98.99'
+print(int(98.99), type(int(98.99))) # 숫자의 경우에는 소수값을 없애고 나오지만 문자열로 받는 경우는 그러지 못해 에러가난다
+
+# 동전 교환
+money, c500,c100,c50,c10=0,0,0,0,0
+
+money = 7777
+
+#500원 : 17개
+c500= money // 500
+money %= 500 #money = money % 500 의 나머지값
+
+c100 = money //100
+money %= 100
+
+c50 = money //50
+money %= 50
+
+c10 = money //10
+money %= 10
+
+print("500원 {}개".format(c500))
+print("100원 {}개".format(c100))
+print("50원 {}개".format(c50))
+print("10원 {}개".format(c10))
+print("남은 돈 {}원".format(money))
+
+# ||, &&, ! => X
+a,b,c = 100,60,15
+print("and : ", a> b & a>c)
+print("and : ", a> b and a>c)
+print("or : ", a> b or a>c)
+print("not : ", not(a> b))
